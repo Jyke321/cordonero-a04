@@ -1,0 +1,10 @@
+@startuml
+class DataHandler {
+    -List data
+
+    +void getDataFromFile()
+    +void displayNumberOfNames()
+    +void displayData()
+    +void sortDataAlphabetically()
+}
+@enduml
