@@ -1,0 +1,8 @@
+@startuml
+class DataHandler {
+    -List<HashMap<>> data
+
+    +getDataFromFile()
+    +printDataToFileTabular()
+}
+@enduml
