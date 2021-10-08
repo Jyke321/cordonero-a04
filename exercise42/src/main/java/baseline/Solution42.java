@@ -6,8 +6,12 @@ package baseline;
  */
 
 public class Solution42 {
-    //get data from file
-
-    //print data in tabular format to file
-
+    public static void main(String[] args) {
+        //get data from file
+        DataHandler data = new DataHandler();
+        data.getDataFromFile();
+        //so, apparently I am very bad at reading...
+        //display the data in tabular format to the console
+        data.displayDataFromFileTabular();
+    }
 }

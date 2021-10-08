@@ -6,7 +6,7 @@ class DataHandler {
     -String SAL
 
     +getDataFromFile()
-    +printDataToFileTabular()
-    -buildTabularOutputString()
+    +displayDataFromFileTabular()
+    +ArrayList<HashMap<String,String>> returnArrayListWithData()
 }
 @enduml
