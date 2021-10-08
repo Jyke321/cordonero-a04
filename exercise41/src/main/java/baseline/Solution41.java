@@ -14,6 +14,7 @@ public class Solution41 {
         data.sortDataAlphabetically();
         //print the total number of names
         data.displayNumberOfNames();
+        System.out.println("-----------------");
         //print the data from the file
         data.displayData();
     }

@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class DataHandler {
     //I haven't done any reading yet so...
-    ArrayList<String> data = new ArrayList<>();
+    private final ArrayList<String> data = new ArrayList<>();
     FileReader in = null;
 
     public void getDataFromFile() {
@@ -18,11 +18,16 @@ public class DataHandler {
             int c;
             StringBuilder string = new StringBuilder();
             while ((c = in.read())!= -1) {
-                if (c!=10)
-                    string.append((char)c);
-                else {
+                if (c==10) {
+                    //delete new line character
+                    string.deleteCharAt(string.length()-1);
+                    //add string to list
                     data.add(String.valueOf(string));
+                    //delete string to make room for next one
                     string.delete(0,string.length());
+                }
+                else {
+                    string.append((char)c);
                 }
             }
             data.add(String.valueOf(string));
@@ -46,5 +51,9 @@ public class DataHandler {
     public void sortDataAlphabetically() {
         //sort the data so that it is in numerical order
         Collections.sort(data);
+    }
+    public ArrayList<String> returnArrayListOfDataAsList() {
+        //extra function for testing the array, so I'm ignoring sonar lint here
+        return data;
     }
 }

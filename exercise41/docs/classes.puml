@@ -6,5 +6,6 @@ class DataHandler {
     +void displayNumberOfNames()
     +void displayData()
     +void sortDataAlphabetically()
+    +ArrayList<String> returnArrayListOfDataAsList()
 }
 @enduml
