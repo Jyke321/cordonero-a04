@@ -8,12 +8,13 @@ package baseline;
 public class Solution41 {
     public static void main(String[] args) {
         //get the data from the file
-
+        DataHandler data = new DataHandler();
+        data.getDataFromFile();
         //sort the data from the file by last name alphabetically
-
+        data.sortDataAlphabetically();
         //print the total number of names
-
+        data.displayNumberOfNames();
         //print the data from the file
-
+        data.displayData();
     }
 }
