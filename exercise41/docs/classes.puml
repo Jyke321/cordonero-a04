@@ -3,9 +3,11 @@ class DataHandler {
     -List data
 
     +void getDataFromFile()
-    +void displayNumberOfNames()
-    +void displayData()
     +void sortDataAlphabetically()
+    +void printDataTotalNumberOfNamesAndDataToFile()
+    -void printNumberOfNamesToFile()
+    -void printDataToFile()
+    -FileWriter initializeFilePointer()
     +ArrayList<String> returnArrayListOfDataAsList()
 }
 @enduml

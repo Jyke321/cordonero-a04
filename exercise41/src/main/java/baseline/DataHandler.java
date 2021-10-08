@@ -1,19 +1,21 @@
 package baseline;
 
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class DataHandler {
     //I haven't done any reading yet so...
     private final ArrayList<String> data = new ArrayList<>();
-    FileReader in = null;
+    private FileWriter fileOut = null;
 
     public void getDataFromFile() {
         //get a line from file and store it in data as a string
         // (loop until end of file, as long as it is similar to C)
         try {
-            in = new FileReader("data/exercise41_input.txt");
+            FileReader in = new FileReader("data/exercise41_input.txt");
             //actually read data and store it in list now
             int c;
             StringBuilder string = new StringBuilder();
@@ -38,14 +40,23 @@ public class DataHandler {
             System.exit(0);
         }
     }
-    public void displayNumberOfNames() {
+    private void printNumberOfNamesToFile(FileWriter fOut) {
         //print the number of elements in the list data
-        System.out.println("Total of " + data.size() +" names");
+        try {
+            fOut.write("Total of " + data.size() +" names\n");
+            fOut.write("-----------------");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-    public void displayData() {
-        //loops through list and displays the data
-        for (String item : data) {
-            System.out.println(item);
+    private void printDataToFile(FileWriter fOut) {
+        try {
+            //loops through list and prints the data to data/exercise41_output.txt
+            for (String item : data) {
+                fOut.write("\n" + item);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     public void sortDataAlphabetically() {
@@ -55,5 +66,26 @@ public class DataHandler {
     public ArrayList<String> returnArrayListOfDataAsList() {
         //extra function for testing the array, so I'm ignoring sonar lint here
         return data;
+    }
+    private FileWriter initializeFilePointer() {
+        //open file to output to
+        try {
+            fileOut = new FileWriter("data/exercise41_output.txt");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return fileOut;
+    }
+    //making a wrapper function... ugh
+    public void printDataTotalNumberOfNamesAndDataToFile() {
+        fileOut = initializeFilePointer();
+        printNumberOfNamesToFile(fileOut);
+        printDataToFile(fileOut);
+        try {
+            fileOut.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

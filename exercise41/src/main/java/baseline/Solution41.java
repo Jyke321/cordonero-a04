@@ -12,10 +12,7 @@ public class Solution41 {
         data.getDataFromFile();
         //sort the data from the file by last name alphabetically
         data.sortDataAlphabetically();
-        //print the total number of names
-        data.displayNumberOfNames();
-        System.out.println("-----------------");
-        //print the data from the file
-        data.displayData();
+        //print the data to the file
+        data.printDataTotalNumberOfNamesAndDataToFile();
     }
 }
