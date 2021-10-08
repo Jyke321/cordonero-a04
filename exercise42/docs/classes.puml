@@ -1,8 +1,12 @@
 @startuml
 class DataHandler {
     -List<HashMap<>> data
+    -String LNAME
+    -String FNAME
+    -String SAL
 
     +getDataFromFile()
     +printDataToFileTabular()
+    -buildTabularOutputString()
 }
 @enduml
