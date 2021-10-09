@@ -1,0 +1,11 @@
+@startuml
+class DataHandler() {
+    - String siteName
+    - String author
+    - Boolean js
+    - Boolean css
+
+    + void getUserInput()
+    +void generateUserFiles()
+}
+@enduml
