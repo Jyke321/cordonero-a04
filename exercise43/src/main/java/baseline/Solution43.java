@@ -8,8 +8,9 @@ package baseline;
 public class Solution43 {
     public static void main(String[] args) {
         //get user input
-
+        DataHandler websiteGenerator = new DataHandler();
+        websiteGenerator.getUserInput();
         //create requested files following user specifications
-
+        websiteGenerator.generateUserFiles();
     }
 }
