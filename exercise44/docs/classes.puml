@@ -1,0 +1,16 @@
+@startuml
+class Solution44 {
+    +main(String args[])
+}
+class DataHandler {
+    -List<Hashmap<>> data
+
+    +getDataFromJSON()
+    -doesProductExist()
+    -displayProduct()
+    'this one has a loop and uses the private functions
+    'to prompt the user until a corresponding product is found
+    +findProduct()
+}
+Solution44 -- DataHandler
+@enduml
