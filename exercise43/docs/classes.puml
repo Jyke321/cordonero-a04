@@ -1,11 +1,23 @@
 @startuml
-class DataHandler() {
+
+class Solution43 {
+    main(Args[])
+}
+
+class DataHandler {
     - String siteName
     - String author
     - Boolean js
     - Boolean css
 
+    DataHandler(String sName, String aName,
+                Boolean js, Boolean css)
+    DataHandler()
+
     + void getUserInput()
+    -getBoolFromUserInput(String input)
     +void generateUserFiles()
 }
+
+Solution43 -- DataHandler
 @enduml

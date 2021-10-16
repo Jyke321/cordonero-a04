@@ -14,6 +14,20 @@ public class DataHandler {
 
     private static final Scanner in = new Scanner(System.in);
 
+    DataHandler(String sName, String aName, Boolean js, Boolean css) {
+        this.siteName = sName;
+        this.author = aName;
+        this.js = js;
+        this.css = css;
+    }
+
+    DataHandler() {
+        this.siteName = "";
+        this.author = "";
+        this.js = false;
+        this.css = false;
+    }
+
     public void getUserInput() {
         //prompt user for input and set the appropriate variables
         System.out.print("Site name: ");
