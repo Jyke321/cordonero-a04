@@ -6,6 +6,8 @@ class DataHandler {
     -StringBuilder data
 
     +getDataFromTextFile()
+    -replaceUtilizeWithUseInDataString()
+    +returnStringData()
     +generateOutputFile()
 }
 Solution45 -- DataHandler
