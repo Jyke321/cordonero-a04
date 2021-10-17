@@ -7,6 +7,9 @@ Class DataHandler {
 
     +getInputFromTxtFile()
     +outputHistogramAsGreatestToLeast()
+    -sortDataByValue()
+    -outputDataToFileAsTabularHistogram()
+    +returnDataFromHashMap()
 }
 Solution46 -- DataHandler
 @enduml
