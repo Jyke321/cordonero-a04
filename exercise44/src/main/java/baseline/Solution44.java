@@ -10,8 +10,9 @@ public class Solution44 {
     //more realistically I probably just have no clue what the point of pseudo code is so oh well.
     public static void main(String[] args) {
         //call an object to store the json data
-
+        DataHandler data = new DataHandler();
+        data.getDataFromJSON();
         //either use a loop to call a function or just a call a self containted object method
-
+        data.findProduct();
     }
 }

@@ -1,14 +1,25 @@
 package baseline;
 
-import java.util.HashMap;
-import java.util.List;
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
+
+import java.io.*;
 
 public class DataHandler {
-    private List<HashMap<String,String>> data = new List<HashMap<>>();
+    private Data data;
 
     public void getDataFromJSON() {
         //parseDataFromJSON and store in data
-
+        Gson gson = new Gson();
+        try (Reader in = new FileReader("data/exercise44_input.json")){
+            JsonReader json = new JsonReader(in);
+            data = gson.fromJson(json, Data.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public String getNameFromSecondProduct(){
+        return  data.products[1].name;
     }
     private boolean doesProductExist() {
         //determines whether string exists in data
