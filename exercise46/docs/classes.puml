@@ -1,0 +1,12 @@
+@startuml
+Class Solution46 {
+    main(Args[])
+}
+Class DataHandler {
+    -HashMap data
+
+    +getInputFromTxtFile()
+    +outputHistogramAsGreatestToLeast()
+}
+Solution46 -- DataHandler
+@enduml

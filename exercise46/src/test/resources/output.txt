@@ -1,0 +1,3 @@
+badger:   *******
+mushroom: **
+snake:    *
