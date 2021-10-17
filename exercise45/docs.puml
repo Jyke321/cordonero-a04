@@ -1,0 +1,12 @@
+@startuml
+class Solution45 {
+    main(String Args[])
+}
+class DataHandler {
+    -StringBuilder data
+
+    +getDataFromTextFile()
+    +generateOutputFile()
+}
+Solution45 -- DataHandler
+@enduml
